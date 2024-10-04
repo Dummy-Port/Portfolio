@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Style sheets -->
+    <link rel="stylesheet" href="./_main_style.css">
+    <title>Aradhyaswami | Portfolio</title>
+    <script src="./demo.js"></script>
+
+
+</head>
+
+<body>
+
+    <div class="container">
+        <!--======= Navbar ======== -->
+
+        <div class="navbar-container">
+            <nav class="navbar">
+                <div class="nav-logo">
+                    <a href="#">My Portfolio</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#about">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact me</a></li>
+                </ul>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </nav>
+        </div>
+        <!-- <button class="clear-btn">clear all</button> -->
+
+
+        <form action="" id="task-form">
+            <input type="text" class="name" style="border-color: black;">
+            <button type="submit">submit</button>
+        </form>
+        
+    </div>
+</body>
+<script>
+    const burger = document.querySelector('.burger');
+    const navLinks = document.querySelector('.nav-links');
+
+    burger.addEventListener('click', () => {
+        navLinks.classList.toggle('nav-active');
+
+        // Burger Animation
+        burger.classList.toggle('toggle');
+    });
+
+    // addEventListener if click button particular function will alert the msg
+    // document.querySelector(".clear-btn").addEventListener("click", function(){
+    //     alert("hello, aradhya.. How are you ? ");
+    // });
+
+
+
+    document.getElementById("task-form").addEventListener("submit", addToLocal);
+
+    function addToLocal(e){
+        
+        e.preventDefault();
+    }
+
+</script>
+
+</html>
